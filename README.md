@@ -3,7 +3,7 @@
 All-in-one application to manage your daily life, productivity, and focus.
 
 🎥 Demo
-<p align="center"> <a href="https://youtu.be/u16lpM0ocLQ?si=1hKiy3Y1INd6Ka-U"> <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg" alt="MyFlow Demo" width="700"/> </a> </p> <p align="center"> ▶️ Click the image to watch the demo </p>
+<p align="center"> <a href="https://youtu.be/u16lpM0ocLQ?si=1hKiy3Y1INd6Ka-U"> <img src="https://img.youtube.com/vi/1hKiy3Y1INd6Ka-U/0.jpg" alt="MyFlow Demo" width="700"/> </a> </p> <p align="center"> ▶️ Click the image to watch the demo </p>
 
 ✨ Features
 🏠 Dashboard
