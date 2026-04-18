@@ -1,0 +1,257 @@
+version: "2"
+type: frontend
+tech_stack:
+  - JavaScript
+  - React 18
+  - React Router v6
+  - CSS (custom styles)
+  - localStorage (data persistence)
+  - Electron (desktop wrapper)
+routes:
+  - path: /
+    file: src/pages/Home.jsx
+    auth_required: false
+    description: Home dashboard with clock widget, weather widget, finance summary, and study progress
+  - path: /clock
+    file: src/pages/Clock.jsx
+    auth_required: false
+    description: Full-screen clock view with customizable background and timezone
+  - path: /finance
+    file: src/pages/Finance.jsx
+    auth_required: false
+    description: Finance tracker with categories, income/expense logging, and summary dashboard
+  - path: /study
+    file: src/pages/Study.jsx
+    auth_required: false
+    description: Study tracker with topics, sub-tasks checklist, timer, and progress tracking
+  - path: /calendar
+    file: src/components/Calendar.jsx
+    auth_required: false
+    description: Calendar with event creation, monthly grid view, and event management
+  - path: /settings
+    file: src/components/Settings.jsx
+    auth_required: false
+    description: App settings including theme, font, colors, background, weather API, and notifications
+features:
+  - name: Clock Widget & Full-Screen Clock
+    description: Displays current time on home dashboard; clicking opens full-screen clock view with customizable background
+    files:
+      - src/pages/Home.jsx
+      - src/pages/Clock.jsx
+      - src/styles/clock.css
+      - src/styles/home.css
+    entry_route: /
+    user_interactions:
+      - View current time and date on home dashboard clock widget
+      - Click clock widget to navigate to full-screen clock view
+      - Click anywhere on full-screen clock to return to home
+    api_calls: []
+    auth_required: false
+  - name: Weather Widget
+    description: Displays current weather for configured city using OpenWeatherMap API
+    files:
+      - src/pages/Home.jsx
+      - src/components/Settings.jsx
+      - src/utils/storage.js
+    entry_route: /
+    user_interactions:
+      - View current temperature and weather conditions on home page
+      - See weather city name, temperature, humidity, and feels-like temperature
+      - Navigate to settings to configure weather API key and city
+    api_calls:
+      - method: GET
+        endpoint: https://api.openweathermap.org/data/2.5/weather
+    auth_required: false
+  - name: Finance Category Management
+    description: Create and manage finance categories for organizing income and expenses
+    files:
+      - src/pages/Finance.jsx
+      - src/utils/storage.js
+      - src/styles/finance.css
+    entry_route: /finance
+    user_interactions:
+      - Click to create a new finance category
+      - Enter category name and save
+      - View list of existing categories
+      - Delete a category
+      - Open a category to view details
+    api_calls: []
+    auth_required: false
+  - name: Finance Transaction Logging
+    description: Add income and expense transactions within categories using preset or custom amounts
+    files:
+      - src/pages/Finance.jsx
+      - src/utils/storage.js
+      - src/styles/finance.css
+    entry_route: /finance
+    user_interactions:
+      - Select a category to open its detail view
+      - Toggle between Income and Expense type
+      - Click a preset amount button to add transaction
+      - Enter a custom amount and save
+      - Add an optional reason/note for the transaction
+      - View transaction history within the category
+      - Delete a transaction from history
+    api_calls: []
+    auth_required: false
+  - name: Finance Summary Dashboard
+    description: View calculated financial summaries including today income, today expense, and total net balance
+    files:
+      - src/pages/Finance.jsx
+      - src/pages/Home.jsx
+      - src/utils/storage.js
+    entry_route: /finance
+    user_interactions:
+      - View today's income total
+      - View today's expense total
+      - View accumulated income and expense
+      - View total net balance
+    api_calls: []
+    auth_required: false
+  - name: Study Topics Management
+    description: Create and manage study topics (main topics) with sub-tasks for tracking learning progress
+    files:
+      - src/pages/Study.jsx
+      - src/utils/storage.js
+      - src/styles/study.css
+    entry_route: /study
+    user_interactions:
+      - Click to add a new study topic
+      - Enter topic title and save
+      - View list of topics with progress percentage
+      - Open a topic to see sub-tasks
+      - Add sub-tasks under a topic
+      - Check/uncheck sub-task checkboxes to mark completion
+      - Delete a sub-task
+      - Delete a topic
+      - View overall progress bar for each topic
+    api_calls: []
+    auth_required: false
+  - name: Study Timer
+    description: Timer for tracking study sessions with subject selection
+    files:
+      - src/pages/Study.jsx
+      - src/utils/storage.js
+      - src/styles/study.css
+    entry_route: /study
+    user_interactions:
+      - Select a subject/topic for the study session
+      - Start the study timer
+      - View elapsed time updating in real-time
+      - Stop the timer to end the session
+      - See session saved confirmation
+    api_calls: []
+    auth_required: false
+  - name: Calendar Event Creation
+    description: Create calendar events with type, name, date, time, and optional notes
+    files:
+      - src/components/Calendar.jsx
+      - src/utils/storage.js
+      - src/utils/notifications.js
+      - src/styles/calendar.css
+    entry_route: /calendar
+    user_interactions:
+      - Click a date on the calendar grid to select it
+      - Choose an event type icon (general, meeting, study, exercise, etc.)
+      - Enter event name
+      - Select event time from presets or enter custom time
+      - Optionally add notes
+      - Toggle quick-start option
+      - Save the event
+    api_calls: []
+    auth_required: false
+  - name: Calendar View & Event Management
+    description: Monthly calendar grid showing events as indicators with ability to view details and delete
+    files:
+      - src/components/Calendar.jsx
+      - src/utils/storage.js
+      - src/styles/calendar.css
+    entry_route: /calendar
+    user_interactions:
+      - Navigate between months using arrow buttons
+      - Click month/year header to open month-year picker
+      - View event indicators (dots) on dates with events
+      - Click event indicator to see event details popup
+      - View event name, type, time, and notes in popup
+      - Delete individual events from popup
+      - Bulk delete multiple events
+    api_calls: []
+    auth_required: false
+  - name: Theme & Appearance Settings
+    description: Toggle light/dark theme, change primary color, and select font
+    files:
+      - src/components/Settings.jsx
+      - src/utils/storage.js
+      - src/styles/settings.css
+    entry_route: /settings
+    user_interactions:
+      - Toggle between Light Mode and Dark Mode
+      - Select a primary accent color from color palette
+      - Choose application font from available options
+      - Save settings and see UI update immediately
+    api_calls: []
+    auth_required: false
+  - name: Clock Customization Settings
+    description: Customize clock appearance including color, bold style, and box background
+    files:
+      - src/components/Settings.jsx
+      - src/utils/storage.js
+      - src/styles/settings.css
+    entry_route: /settings
+    user_interactions:
+      - Select clock text color
+      - Toggle bold clock text
+      - Toggle clock box background style
+      - Select timezone for clock display
+      - Save settings
+    api_calls: []
+    auth_required: false
+  - name: Background & Wallpaper Settings
+    description: Set application background using image upload, URL, video, or solid color
+    files:
+      - src/components/Settings.jsx
+      - src/utils/storage.js
+      - src/styles/settings.css
+    entry_route: /settings
+    user_interactions:
+      - Select background type (image, color, video)
+      - Upload an image file as background
+      - Enter a direct image URL as background
+      - Select a solid background color
+      - Clear current background
+      - Save settings
+    api_calls: []
+    auth_required: false
+  - name: Language Toggle
+    description: Switch between Thai and English language
+    files:
+      - src/App.js
+      - src/utils/i18n.js
+    entry_route: /
+    user_interactions:
+      - Click the language toggle button to switch between Thai and English
+      - See all UI text update to selected language
+    api_calls: []
+    auth_required: false
+  - name: Sidebar Navigation
+    description: Side navigation bar with links to all sections and live clock display
+    files:
+      - src/components/Sidebar.jsx
+      - src/styles/sidebar.css
+    entry_route: /
+    user_interactions:
+      - Click Home link to navigate to dashboard
+      - Click Finance link to navigate to finance page
+      - Click Study link to navigate to study page
+      - Click Calendar link to navigate to calendar page
+      - Click Settings link to navigate to settings page
+      - View current time in sidebar bottom
+    api_calls: []
+    auth_required: false
+known_limitations:
+  - issue: All data is stored in localStorage with no backend API
+    location: src/utils/storage.js
+    impact: Data is browser-local only and limited by localStorage quota
+  - issue: Weather widget requires user to manually configure OpenWeatherMap API key
+    location: src/pages/Home.jsx
+    impact: Weather data will not display without API key configuration

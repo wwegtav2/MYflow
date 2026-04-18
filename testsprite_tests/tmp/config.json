@@ -1,0 +1,18 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:3000",
+  "executionArgs": {
+    "projectName": "myflow",
+    "projectPath": "d:\\project\\myflow",
+    "testIds": [],
+    "additionalInstruction": "This is a Thai/English bilingual app. The default language may be Thai. No login is required. All data is stored in localStorage. The app runs on port 3000 in production mode.",
+    "serverMode": "production",
+    "envs": {
+      "API_KEY": "sk-user-cLEK5roFcCJT9ss7D9f74nirpDC6g8-5avNnXXoTMxscc_Mkjv60Kz6x_crxKpdb2g2uo_sU0bZwanPcgp7wltly5Q0cWwa3HwH1I8JJe2A5k23uHWEA52wcO3Ir_KOmt6U"
+    }
+  },
+  "serverPort": 64687,
+  "proxy": "http://dcd0880a-af33-43f3-a0e0-ffb3e2801b4e:998RPMJm6P0s6vThzGkoVMg9RyhkWAGT@tun.testsprite.com:8080"
+}

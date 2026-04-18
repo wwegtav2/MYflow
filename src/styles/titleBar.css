@@ -1,0 +1,45 @@
+.titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--titlebar-h);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  padding: 0 8px 0 16px;
+  -webkit-app-region: drag;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.titlebar-drag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  -webkit-app-region: drag;
+}
+
+.titlebar-logo { font-size: 16px; color: var(--accent); }
+.titlebar-name { font-size: 13px; font-weight: 600; color: var(--text-secondary); letter-spacing: 0.05em; }
+
+.titlebar-controls {
+  display: flex;
+  gap: 4px;
+  -webkit-app-region: no-drag;
+}
+
+.tb-btn {
+  width: 28px;
+  height: 22px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tb-btn:hover    { background: var(--bg-hover); color: var(--text-primary); }
+.tb-btn.cls:hover{ background: rgba(248,113,113,0.2); color: var(--red); }

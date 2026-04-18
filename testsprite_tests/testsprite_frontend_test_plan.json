@@ -1,0 +1,1820 @@
+[
+  {
+    "id": "TC001",
+    "title": "Sidebar navigation to Finance renders the finance page",
+    "description": "User navigates from Home to Finance using the sidebar and the Finance page renders successfully with the sidebar visible.",
+    "category": "Sidebar Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the sidebar link to open Finance"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the finance tracker page is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the sidebar is visible with a current time display"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC002",
+    "title": "Open full-screen clock from Home and return to Home",
+    "description": "Verifies the user can open the full-screen clock from the Home clock widget and return to Home by clicking the clock view.",
+    "category": "Clock Widget & Full-Screen Clock",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the clock widget to open the full-screen clock view"
+      },
+      {
+        "type": "action",
+        "description": "Click anywhere on the full-screen clock view"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the user lands on the home dashboard"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC003",
+    "title": "Sidebar multi-page navigation across Study, Calendar, Settings, and back Home",
+    "description": "User navigates across Study, Calendar, Settings, and returns Home via the sidebar and each destination renders correctly.",
+    "category": "Sidebar Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the sidebar link to open Study"
+      },
+      {
+        "type": "action",
+        "description": "Click the sidebar link to open Calendar"
+      },
+      {
+        "type": "action",
+        "description": "Click the sidebar link to open Settings"
+      },
+      {
+        "type": "action",
+        "description": "Click the sidebar link to return to Home"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Home dashboard is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the sidebar is visible with a current time display"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "Clock continues displaying across main routes",
+    "description": "Verifies the clock widget remains present and the app can navigate between core routes without breaking the clock display.",
+    "category": "Clock Widget & Full-Screen Clock",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the sidebar navigation to go to the finance page"
+      },
+      {
+        "type": "action",
+        "description": "Click the sidebar navigation to go to the study page"
+      },
+      {
+        "type": "action",
+        "description": "Click the sidebar navigation to go to the calendar page"
+      },
+      {
+        "type": "action",
+        "description": "Click the sidebar navigation to go to the settings page"
+      },
+      {
+        "type": "action",
+        "description": "Click the sidebar navigation to return to the home dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the home dashboard clock widget is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC005",
+    "title": "Navigate months and pick a specific month/year",
+    "description": "Verifies the user can navigate between months with arrows and jump to a chosen month/year and the calendar grid updates accordingly.",
+    "category": "Calendar View & Event Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /calendar"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to the next month using the calendar arrow control"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to the previous month using the calendar arrow control"
+      },
+      {
+        "type": "action",
+        "description": "Open the month/year picker from the calendar header"
+      },
+      {
+        "type": "action",
+        "description": "Select a different month and year in the picker"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the calendar month grid updates to the selected month and year"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC006",
+    "title": "Start and stop a study timer session for a selected topic",
+    "description": "Verifies a user can select a topic, start the study timer, stop it, and see a saved session confirmation.",
+    "category": "Study Timer",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /study"
+      },
+      {
+        "type": "action",
+        "description": "Click to add a new study topic"
+      },
+      {
+        "type": "action",
+        "description": "Fill Study Timer Topic 01 into the topic title field"
+      },
+      {
+        "type": "action",
+        "description": "Save the new topic"
+      },
+      {
+        "type": "action",
+        "description": "Select the subject/topic Study Timer Topic 01 for the session"
+      },
+      {
+        "type": "action",
+        "description": "Start the study timer"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the elapsed time to increase"
+      },
+      {
+        "type": "action",
+        "description": "Stop the timer"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a session saved confirmation is visible"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC007",
+    "title": "Finance totals update after adding income and expense across categories",
+    "description": "After adding income and expense transactions across categories, the finance page shows updated today totals, accumulated totals, and net balance.",
+    "category": "Finance Summary Dashboard",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /finance"
+      },
+      {
+        "type": "action",
+        "description": "Click to create a new finance category"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"IncomeCat\" into the category name field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the category creation form"
+      },
+      {
+        "type": "action",
+        "description": "Open the \"IncomeCat\" category from the categories list"
+      },
+      {
+        "type": "action",
+        "description": "Select Income transaction type"
+      },
+      {
+        "type": "action",
+        "description": "Click a preset amount to add a transaction"
+      },
+      {
+        "type": "action",
+        "description": "Click to return to the finance categories list"
+      },
+      {
+        "type": "action",
+        "description": "Click to create a new finance category"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"ExpenseCat\" into the category name field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the category creation form"
+      },
+      {
+        "type": "action",
+        "description": "Open the \"ExpenseCat\" category from the categories list"
+      },
+      {
+        "type": "action",
+        "description": "Select Expense transaction type"
+      },
+      {
+        "type": "action",
+        "description": "Click a preset amount to add a transaction"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the finance summary section shows updated today totals and net balance"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC008",
+    "title": "Create a calendar event with notes and quick-start and see indicator on the date",
+    "description": "Verifies a user can create a calendar event with type, name, time, notes, and quick-start enabled, and an indicator appears on the selected date.",
+    "category": "Calendar Event Creation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /calendar"
+      },
+      {
+        "type": "action",
+        "description": "Click a date on the calendar grid to select it"
+      },
+      {
+        "type": "action",
+        "description": "Choose an event type icon"
+      },
+      {
+        "type": "action",
+        "description": "Fill Event With Notes 01 into the event name field"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid event time"
+      },
+      {
+        "type": "action",
+        "description": "Fill Add notes for this event into the notes field"
+      },
+      {
+        "type": "action",
+        "description": "Toggle the quick-start option on"
+      },
+      {
+        "type": "action",
+        "description": "Save the event"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an event indicator appears on the selected date"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC009",
+    "title": "Create an event and view its details from the indicator popup",
+    "description": "Verifies the user can create an event for a selected date and then open an indicator popup to see the event details.",
+    "category": "Calendar View & Event Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /calendar"
+      },
+      {
+        "type": "action",
+        "description": "Select a date cell in the current month"
+      },
+      {
+        "type": "action",
+        "description": "Create a new event for the selected date with a type, a name, a valid time, and notes"
+      },
+      {
+        "type": "action",
+        "description": "Save the event"
+      },
+      {
+        "type": "action",
+        "description": "Click the event indicator on that date"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an event details popup is displayed with the event name, type, time, and notes"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC010",
+    "title": "Log a preset income and see history and totals update",
+    "description": "User can add a preset income transaction and it appears in transaction history while the category totals update.",
+    "category": "Finance Transaction Logging",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /finance"
+      },
+      {
+        "type": "action",
+        "description": "Click to create a new finance category"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"Salary\" into the category name field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the category creation form"
+      },
+      {
+        "type": "action",
+        "description": "Open the \"Salary\" category from the categories list"
+      },
+      {
+        "type": "action",
+        "description": "Select Income transaction type"
+      },
+      {
+        "type": "action",
+        "description": "Click a preset amount to add a transaction"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a new transaction entry is displayed in the category history"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the category totals reflect the added income"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC011",
+    "title": "Add sub-tasks and completion updates topic progress",
+    "description": "Verifies a user can add sub-tasks to a topic and marking one complete updates the topic progress percentage.",
+    "category": "Study Topics Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /study"
+      },
+      {
+        "type": "action",
+        "description": "Click to add a new study topic"
+      },
+      {
+        "type": "action",
+        "description": "Fill Study Topic Progress 01 into the topic title field"
+      },
+      {
+        "type": "action",
+        "description": "Save the new topic"
+      },
+      {
+        "type": "action",
+        "description": "Open the topic details"
+      },
+      {
+        "type": "action",
+        "description": "Add a sub-task named Subtask A"
+      },
+      {
+        "type": "action",
+        "description": "Add a sub-task named Subtask B"
+      },
+      {
+        "type": "action",
+        "description": "Check the checkbox for Subtask A"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the topic progress percentage increases from the initial value"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC012",
+    "title": "Delete an individual event from the indicator popup",
+    "description": "Verifies the user can delete a single event from its details popup and the calendar indicator is removed.",
+    "category": "Calendar View & Event Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /calendar"
+      },
+      {
+        "type": "action",
+        "description": "Select a date cell in the current month"
+      },
+      {
+        "type": "action",
+        "description": "Create a new event for the selected date with a type, a name, and a valid time"
+      },
+      {
+        "type": "action",
+        "description": "Save the event"
+      },
+      {
+        "type": "action",
+        "description": "Click the event indicator on that date"
+      },
+      {
+        "type": "action",
+        "description": "Delete the event from the event details popup"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the event indicator for that date is no longer displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC013",
+    "title": "Sidebar clock continues updating when navigating between pages",
+    "description": "User observes the sidebar time, navigates to another section, and confirms the sidebar clock updates rather than remaining static.",
+    "category": "Sidebar Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Note the current time shown in the sidebar clock"
+      },
+      {
+        "type": "action",
+        "description": "Wait for 2 seconds"
+      },
+      {
+        "type": "action",
+        "description": "Click the sidebar link to open Finance"
+      },
+      {
+        "type": "action",
+        "description": "Wait for 2 seconds"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the sidebar clock time has advanced since it was first observed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC014",
+    "title": "Access full-screen clock directly and return to Home",
+    "description": "Verifies the user can load the full-screen clock route directly and return to the home dashboard by clicking the clock view.",
+    "category": "Clock Widget & Full-Screen Clock",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /clock"
+      },
+      {
+        "type": "action",
+        "description": "Click anywhere on the full-screen clock view"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the user lands on the home dashboard"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC015",
+    "title": "Create a new finance category and see it listed",
+    "description": "User can create a finance category and the new category appears in the categories list on the finance page.",
+    "category": "Finance Category Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /finance"
+      },
+      {
+        "type": "action",
+        "description": "Click to create a new finance category"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"Groceries\" into the category name field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the category creation form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the new category is displayed in the categories list"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC016",
+    "title": "Create a study topic and see it listed with progress",
+    "description": "Verifies a user can create a new study topic and it appears in the topics list with an initial progress percentage displayed.",
+    "category": "Study Topics Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /study"
+      },
+      {
+        "type": "action",
+        "description": "Click to add a new study topic"
+      },
+      {
+        "type": "action",
+        "description": "Fill Study Topic Title 01 into the topic title field"
+      },
+      {
+        "type": "action",
+        "description": "Save the new topic"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the new topic appears in the topics list with a progress percentage shown"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC017",
+    "title": "Home finance summary reflects finance transactions",
+    "description": "After logging finance transactions, the Home dashboard finance summary reflects the updated totals.",
+    "category": "Finance Summary Dashboard",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /finance"
+      },
+      {
+        "type": "action",
+        "description": "Click to create a new finance category"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"HomeSync\" into the category name field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the category creation form"
+      },
+      {
+        "type": "action",
+        "description": "Open the \"HomeSync\" category from the categories list"
+      },
+      {
+        "type": "action",
+        "description": "Select Income transaction type"
+      },
+      {
+        "type": "action",
+        "description": "Click a preset amount to add a transaction"
+      },
+      {
+        "type": "action",
+        "description": "Click the sidebar link to go to the home dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Home dashboard finance summary is updated to reflect the recent transaction"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC018",
+    "title": "Theme and typography persist after reload",
+    "description": "Verifies saved theme, accent color, and font persist after a page reload and are still applied.",
+    "category": "Theme & Appearance Settings",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /settings"
+      },
+      {
+        "type": "action",
+        "description": "Toggle the theme mode to the opposite setting"
+      },
+      {
+        "type": "action",
+        "description": "Select a different primary accent color"
+      },
+      {
+        "type": "action",
+        "description": "Select a different application font"
+      },
+      {
+        "type": "action",
+        "description": "Save settings"
+      },
+      {
+        "type": "action",
+        "description": "Reload the page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the app UI still reflects the saved theme mode, accent styling, and selected font"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC019",
+    "title": "Log a custom expense with a note and see it in history",
+    "description": "User can add a custom expense amount with an optional note and the transaction appears in the category history.",
+    "category": "Finance Transaction Logging",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /finance"
+      },
+      {
+        "type": "action",
+        "description": "Click to create a new finance category"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"Transport\" into the category name field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the category creation form"
+      },
+      {
+        "type": "action",
+        "description": "Open the \"Transport\" category from the categories list"
+      },
+      {
+        "type": "action",
+        "description": "Select Expense transaction type"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"135\" into the custom amount field"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"Taxi\" into the note field"
+      },
+      {
+        "type": "action",
+        "description": "Save the transaction"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the new expense transaction is displayed in the category history"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC020",
+    "title": "Sidebar navigation remains usable after language toggle",
+    "description": "User changes language on Home and can still navigate via the sidebar to another section without losing navigation functionality.",
+    "category": "Sidebar Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the language toggle control to switch languages"
+      },
+      {
+        "type": "action",
+        "description": "Click the sidebar link to open Study"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the study tracker page is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the sidebar is visible with navigation links"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC021",
+    "title": "Return to Home from full-screen clock does not break Home widgets",
+    "description": "Verifies that returning from full-screen clock restores the Home dashboard with key widgets still visible.",
+    "category": "Clock Widget & Full-Screen Clock",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the clock widget to open the full-screen clock view"
+      },
+      {
+        "type": "action",
+        "description": "Click anywhere on the full-screen clock view"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the home dashboard widgets are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC022",
+    "title": "Deleting a transaction updates finance summaries on both Finance and Home",
+    "description": "After deleting a previously added transaction, the finance summaries update on the finance page and on the Home dashboard.",
+    "category": "Finance Summary Dashboard",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /finance"
+      },
+      {
+        "type": "action",
+        "description": "Click to create a new finance category"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"Recalc\" into the category name field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the category creation form"
+      },
+      {
+        "type": "action",
+        "description": "Open the \"Recalc\" category from the categories list"
+      },
+      {
+        "type": "action",
+        "description": "Select Expense transaction type"
+      },
+      {
+        "type": "action",
+        "description": "Click a preset amount to add a transaction"
+      },
+      {
+        "type": "action",
+        "description": "Delete the most recent transaction in the category history"
+      },
+      {
+        "type": "action",
+        "description": "Click the sidebar link to go to the home dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Home dashboard finance summary reflects the deleted transaction"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC023",
+    "title": "Toggle theme and see immediate update on Home",
+    "description": "Verifies switching between light and dark theme updates the UI and the Home dashboard reflects the selected theme after saving.",
+    "category": "Theme & Appearance Settings",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /settings"
+      },
+      {
+        "type": "action",
+        "description": "Toggle the theme mode to the opposite setting"
+      },
+      {
+        "type": "action",
+        "description": "Save settings"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation item to go to the Home dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Home dashboard displays in the selected theme mode"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC024",
+    "title": "Open a category and delete it from its details view",
+    "description": "User can open a category, delete it, and the category is removed from the categories list.",
+    "category": "Finance Category Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /finance"
+      },
+      {
+        "type": "action",
+        "description": "Click to create a new finance category"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"Subscriptions\" into the category name field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the category creation form"
+      },
+      {
+        "type": "action",
+        "description": "Open the \"Subscriptions\" category from the categories list"
+      },
+      {
+        "type": "action",
+        "description": "Delete the currently opened category"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the deleted category is no longer displayed in the categories list"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC025",
+    "title": "Delete a sub-task updates progress and deleting topic removes it",
+    "description": "Verifies a user can delete a sub-task and then delete the topic, with progress recalculating and the topic disappearing from the list.",
+    "category": "Study Topics Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /study"
+      },
+      {
+        "type": "action",
+        "description": "Click to add a new study topic"
+      },
+      {
+        "type": "action",
+        "description": "Fill Study Topic Delete 01 into the topic title field"
+      },
+      {
+        "type": "action",
+        "description": "Save the new topic"
+      },
+      {
+        "type": "action",
+        "description": "Open the topic details"
+      },
+      {
+        "type": "action",
+        "description": "Add a sub-task named Subtask To Delete"
+      },
+      {
+        "type": "action",
+        "description": "Delete the sub-task named Subtask To Delete"
+      },
+      {
+        "type": "action",
+        "description": "Delete the topic"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the deleted topic is no longer shown in the topics list"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC026",
+    "title": "Bulk delete multiple events and confirm removal",
+    "description": "Verifies the user can select multiple events and confirm bulk deletion to remove them from the calendar.",
+    "category": "Calendar View & Event Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /calendar"
+      },
+      {
+        "type": "action",
+        "description": "Select a date cell in the current month"
+      },
+      {
+        "type": "action",
+        "description": "Create a new event for the selected date with a name and a valid time"
+      },
+      {
+        "type": "action",
+        "description": "Save the event"
+      },
+      {
+        "type": "action",
+        "description": "Select a different date cell in the current month"
+      },
+      {
+        "type": "action",
+        "description": "Create another new event for that date with a name and a valid time"
+      },
+      {
+        "type": "action",
+        "description": "Save the event"
+      },
+      {
+        "type": "action",
+        "description": "Enter multi-select mode and select both events"
+      },
+      {
+        "type": "action",
+        "description": "Perform bulk delete and confirm the deletion"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the selected events are no longer displayed on the calendar"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC027",
+    "title": "Delete a transaction and see totals update",
+    "description": "User can delete a transaction from history and the transaction disappears while totals are recalculated.",
+    "category": "Finance Transaction Logging",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /finance"
+      },
+      {
+        "type": "action",
+        "description": "Click to create a new finance category"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"Shopping\" into the category name field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the category creation form"
+      },
+      {
+        "type": "action",
+        "description": "Open the \"Shopping\" category from the categories list"
+      },
+      {
+        "type": "action",
+        "description": "Select Expense transaction type"
+      },
+      {
+        "type": "action",
+        "description": "Click a preset amount to add a transaction"
+      },
+      {
+        "type": "action",
+        "description": "Delete the most recent transaction in the category history"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the deleted transaction is no longer displayed in the category history"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the category totals reflect the deletion"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC028",
+    "title": "Switch app language to Thai from Home",
+    "description": "User switches the UI language to Thai from the Home dashboard and the UI updates to Thai.",
+    "category": "Language Toggle",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the language toggle control to switch to Thai"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Home dashboard UI text is displayed in Thai"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC029",
+    "title": "Create a calendar event without notes and see indicator on the date",
+    "description": "Verifies a user can create and save an event without notes and an indicator appears on the selected date.",
+    "category": "Calendar Event Creation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /calendar"
+      },
+      {
+        "type": "action",
+        "description": "Click a date on the calendar grid to select it"
+      },
+      {
+        "type": "action",
+        "description": "Choose an event type icon"
+      },
+      {
+        "type": "action",
+        "description": "Fill Event No Notes 01 into the event name field"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid event time"
+      },
+      {
+        "type": "action",
+        "description": "Save the event"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an event indicator appears on the selected date"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC030",
+    "title": "Delete a category and ensure its transactions are removed from the finance UI",
+    "description": "After deleting a category that contains transactions, the category and its transaction history no longer appear in the finance UI.",
+    "category": "Finance Category Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /finance"
+      },
+      {
+        "type": "action",
+        "description": "Click to create a new finance category"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"Dining\" into the category name field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the category creation form"
+      },
+      {
+        "type": "action",
+        "description": "Open the \"Dining\" category from the categories list"
+      },
+      {
+        "type": "action",
+        "description": "Select Income transaction type"
+      },
+      {
+        "type": "action",
+        "description": "Click a preset amount to add a transaction"
+      },
+      {
+        "type": "action",
+        "description": "Delete the currently opened category"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the deleted category is not shown anywhere in the finance page"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC031",
+    "title": "Event indicators persist after navigating away and back across months",
+    "description": "Verifies an event indicator remains visible after navigating to another month and returning to the original month.",
+    "category": "Calendar View & Event Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /calendar"
+      },
+      {
+        "type": "action",
+        "description": "Select a date cell in the current month"
+      },
+      {
+        "type": "action",
+        "description": "Create a new event for the selected date with a name and a valid time"
+      },
+      {
+        "type": "action",
+        "description": "Save the event"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to the next month using the calendar arrow control"
+      },
+      {
+        "type": "action",
+        "description": "Navigate back to the original month using the calendar arrow control"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the event indicator for the created event is still displayed on the original date"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC032",
+    "title": "Switch app language to English from Home",
+    "description": "User switches the UI language to English from the Home dashboard and the UI updates to English.",
+    "category": "Language Toggle",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the language toggle control to switch to English"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Home dashboard UI text is displayed in English"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC033",
+    "title": "Full-screen clock displays time and date",
+    "description": "Verifies the full-screen clock view renders the enlarged time and date for the user to read.",
+    "category": "Clock Widget & Full-Screen Clock",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the clock widget to open the full-screen clock view"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the full-screen clock shows the current time and date"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC034",
+    "title": "Change accent color and font and see UI update immediately",
+    "description": "Verifies selecting a new accent color and font applies immediately across the app after saving settings.",
+    "category": "Theme & Appearance Settings",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /settings"
+      },
+      {
+        "type": "action",
+        "description": "Select a different primary accent color"
+      },
+      {
+        "type": "action",
+        "description": "Select a different application font"
+      },
+      {
+        "type": "action",
+        "description": "Save settings"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation item to go to the Home dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Home dashboard reflects the newly selected font and accent styling"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC035",
+    "title": "Clock settings persist after app reload",
+    "description": "Verifies that saved clock appearance settings persist when the app is reloaded and are still applied to the full-screen clock.",
+    "category": "Clock Customization Settings",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /settings"
+      },
+      {
+        "type": "action",
+        "description": "Select a clock text color"
+      },
+      {
+        "type": "action",
+        "description": "Toggle bold clock text"
+      },
+      {
+        "type": "action",
+        "description": "Save settings"
+      },
+      {
+        "type": "action",
+        "description": "Reload the page"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation to open the full-screen clock view"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the full-screen clock appearance reflects the saved clock settings"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC036",
+    "title": "Prevent starting the timer without selecting a topic",
+    "description": "Verifies attempting to start the study timer without selecting a subject is blocked and a validation prompt is shown.",
+    "category": "Study Timer",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /study"
+      },
+      {
+        "type": "action",
+        "description": "Ensure no subject/topic is selected for the session"
+      },
+      {
+        "type": "action",
+        "description": "Start the study timer"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a validation prompt is shown and the timer does not start"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC037",
+    "title": "Customize clock appearance and see it on full-screen clock",
+    "description": "Verifies that changing clock text color, bold setting, and clock box background style in settings is reflected on the full-screen clock view.",
+    "category": "Clock Customization Settings",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /settings"
+      },
+      {
+        "type": "action",
+        "description": "Select a clock text color"
+      },
+      {
+        "type": "action",
+        "description": "Toggle bold clock text"
+      },
+      {
+        "type": "action",
+        "description": "Toggle the clock box background style"
+      },
+      {
+        "type": "action",
+        "description": "Save settings"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation to open the full-screen clock view"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the full-screen clock appearance reflects the updated clock settings"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC038",
+    "title": "Set a solid color background and see it applied on Home",
+    "description": "Verifies the user can choose a solid background color, save it, and see the background applied on the Home dashboard.",
+    "category": "Background & Wallpaper Settings",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /settings"
+      },
+      {
+        "type": "action",
+        "description": "Select background type as a solid color"
+      },
+      {
+        "type": "action",
+        "description": "Select a solid background color"
+      },
+      {
+        "type": "action",
+        "description": "Save settings"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation item to go to the Home dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Home dashboard background displays the selected solid color"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC039",
+    "title": "Unchecking a completed sub-task decreases progress",
+    "description": "Verifies a user can uncheck a previously completed sub-task and the topic progress percentage decreases accordingly.",
+    "category": "Study Topics Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /study"
+      },
+      {
+        "type": "action",
+        "description": "Click to add a new study topic"
+      },
+      {
+        "type": "action",
+        "description": "Fill Study Topic Uncheck 01 into the topic title field"
+      },
+      {
+        "type": "action",
+        "description": "Save the new topic"
+      },
+      {
+        "type": "action",
+        "description": "Open the topic details"
+      },
+      {
+        "type": "action",
+        "description": "Add a sub-task named Subtask Toggle"
+      },
+      {
+        "type": "action",
+        "description": "Check the checkbox for Subtask Toggle"
+      },
+      {
+        "type": "action",
+        "description": "Uncheck the checkbox for Subtask Toggle"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the topic progress percentage returns to the initial value"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC040",
+    "title": "Set a background image via URL and see it applied on Home",
+    "description": "Verifies the user can set a background image using a direct image URL and see it applied after saving.",
+    "category": "Background & Wallpaper Settings",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /settings"
+      },
+      {
+        "type": "action",
+        "description": "Select background type as an image"
+      },
+      {
+        "type": "action",
+        "description": "Fill a direct image URL into the background image URL field"
+      },
+      {
+        "type": "action",
+        "description": "Save settings"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation item to go to the Home dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Home dashboard background displays an image rather than the default background"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC041",
+    "title": "Change clock timezone and see it on full-screen clock",
+    "description": "Verifies that selecting a different timezone in settings updates the full-screen clock time display.",
+    "category": "Clock Customization Settings",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /settings"
+      },
+      {
+        "type": "action",
+        "description": "Select a different timezone for the clock display"
+      },
+      {
+        "type": "action",
+        "description": "Save settings"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation to open the full-screen clock view"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the full-screen clock time reflects the selected timezone"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC042",
+    "title": "Create an event using a custom time entry",
+    "description": "Verifies a user can enter a custom time for an event and save it successfully with an indicator shown on the date.",
+    "category": "Calendar Event Creation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /calendar"
+      },
+      {
+        "type": "action",
+        "description": "Click a date on the calendar grid to select it"
+      },
+      {
+        "type": "action",
+        "description": "Choose an event type icon"
+      },
+      {
+        "type": "action",
+        "description": "Fill Event Custom Time 01 into the event name field"
+      },
+      {
+        "type": "action",
+        "description": "Enter a valid custom time into the event time field"
+      },
+      {
+        "type": "action",
+        "description": "Save the event"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an event indicator appears on the selected date"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC043",
+    "title": "Background setting persists after reload",
+    "description": "Verifies the selected background configuration persists after a page reload and remains applied.",
+    "category": "Background & Wallpaper Settings",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /settings"
+      },
+      {
+        "type": "action",
+        "description": "Select background type as a solid color"
+      },
+      {
+        "type": "action",
+        "description": "Select a solid background color"
+      },
+      {
+        "type": "action",
+        "description": "Save settings"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation item to go to the Home dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Reload the page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Home dashboard background remains set to the saved background"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC044",
+    "title": "Navigate from Home to Settings to configure weather fields and return",
+    "description": "Verifies the user can reach weather configuration from settings, enter API key and city, save, and return to Home without UI issues.",
+    "category": "Weather Widget",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /settings"
+      },
+      {
+        "type": "action",
+        "description": "Fill a value into the weather API key field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a value into the weather city field"
+      },
+      {
+        "type": "action",
+        "description": "Save settings"
+      },
+      {
+        "type": "action",
+        "description": "Click the sidebar navigation to return to the home dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the weather widget is displayed on the home dashboard"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC045",
+    "title": "Weather configuration persists after reload",
+    "description": "Verifies that the saved weather API key and city remain configured after a page reload and the Home weather section stays enabled.",
+    "category": "Weather Widget",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /settings"
+      },
+      {
+        "type": "action",
+        "description": "Fill a value into the weather API key field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a value into the weather city field"
+      },
+      {
+        "type": "action",
+        "description": "Save settings"
+      },
+      {
+        "type": "action",
+        "description": "Reload the page"
+      },
+      {
+        "type": "action",
+        "description": "Click the sidebar navigation to return to the home dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the weather widget is displayed on the home dashboard"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC046",
+    "title": "Progress shows complete when all sub-tasks are checked",
+    "description": "Verifies a user can complete all sub-tasks and the topic progress displays full completion.",
+    "category": "Study Topics Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /study"
+      },
+      {
+        "type": "action",
+        "description": "Click to add a new study topic"
+      },
+      {
+        "type": "action",
+        "description": "Fill Study Topic Complete 01 into the topic title field"
+      },
+      {
+        "type": "action",
+        "description": "Save the new topic"
+      },
+      {
+        "type": "action",
+        "description": "Open the topic details"
+      },
+      {
+        "type": "action",
+        "description": "Add a sub-task named Subtask 1"
+      },
+      {
+        "type": "action",
+        "description": "Add a sub-task named Subtask 2"
+      },
+      {
+        "type": "action",
+        "description": "Check the checkbox for Subtask 1"
+      },
+      {
+        "type": "action",
+        "description": "Check the checkbox for Subtask 2"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the topic progress indicates full completion"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC047",
+    "title": "Clear background and restore default appearance on Home",
+    "description": "Verifies the user can clear any existing background setting and return to the default background after saving.",
+    "category": "Background & Wallpaper Settings",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /settings"
+      },
+      {
+        "type": "action",
+        "description": "Select background type as a solid color"
+      },
+      {
+        "type": "action",
+        "description": "Select a solid background color"
+      },
+      {
+        "type": "action",
+        "description": "Save settings"
+      },
+      {
+        "type": "action",
+        "description": "Clear the current background"
+      },
+      {
+        "type": "action",
+        "description": "Save settings"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation item to go to the Home dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Home dashboard background is restored to the default background"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC048",
+    "title": "View weather widget empty state when not configured",
+    "description": "Verifies the home weather widget shows a sane placeholder or empty state when no API key and city have been configured.",
+    "category": "Weather Widget",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the weather widget displays a placeholder or empty state instead of weather data"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC049",
+    "title": "Clear weather city and verify weather is disabled on Home",
+    "description": "Verifies that clearing the configured city and saving results in the Home weather widget returning to a placeholder or empty state.",
+    "category": "Weather Widget",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /settings"
+      },
+      {
+        "type": "action",
+        "description": "Fill a value into the weather API key field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a value into the weather city field"
+      },
+      {
+        "type": "action",
+        "description": "Save settings"
+      },
+      {
+        "type": "action",
+        "description": "Clear the weather city field"
+      },
+      {
+        "type": "action",
+        "description": "Save settings"
+      },
+      {
+        "type": "action",
+        "description": "Click the sidebar navigation to return to the home dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the weather widget displays a placeholder or empty state instead of weather data"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC050",
+    "title": "Handle duplicate category names consistently",
+    "description": "When a user attempts to create a category with an existing name, the UI prevents duplicates or clearly differentiates the new category so the list remains unambiguous.",
+    "category": "Finance Category Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /finance"
+      },
+      {
+        "type": "action",
+        "description": "Click to create a new finance category"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"Utilities\" into the category name field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the category creation form"
+      },
+      {
+        "type": "action",
+        "description": "Click to create a new finance category"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"Utilities\" into the category name field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the category creation form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the categories list does not become ambiguous due to duplicate category names"
+      }
+    ],
+    "priority": "Low"
+  }
+]

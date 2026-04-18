@@ -1,0 +1,581 @@
+/* ============================================================
+   study.css — Study Page Styles (polished)
+   ============================================================ */
+
+.study-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ─── Global Progress ─────────────────────────────── */
+.global-progress {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.global-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.global-progress-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.global-progress-percent {
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  color: var(--accent);
+}
+.global-progress-detail {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ─── Progress Bar ────────────────────────────────── */
+.progress-bar-track {
+  width: 100%;
+  background: var(--bg-secondary);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.progress-bar-track.md { height: 8px; }
+.progress-bar-track.lg { height: 14px; }
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 0;
+}
+
+/* ─── Section Header / Add Row ────────────────────── */
+.section-h3 {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+.section-h3-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 0.75rem;
+}
+.add-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 0.5rem;
+}
+
+/* ─── Topic Card (list view) ──────────────────────── */
+.topic-card {
+  padding: 0;
+  overflow: hidden;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.topic-card.selected {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(124, 111, 255, 0.3);
+}
+
+.topic-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 1rem 1.25rem;
+}
+.topic-header-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  cursor: pointer;
+  transition: opacity var(--transition);
+}
+.topic-header-content:hover { opacity: 0.85; }
+.topic-arrow {
+  font-size: 10px;
+  color: var(--text-muted);
+  width: 14px;
+  transition: color var(--transition);
+}
+.topic-header-content:hover .topic-arrow { color: var(--accent); }
+.topic-title {
+  flex: 1;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text-primary);
+}
+.topic-percent {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--accent);
+  min-width: 40px;
+  text-align: right;
+}
+
+.topic-progress-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 1.25rem 1rem;
+}
+.topic-progress-text {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  min-width: 36px;
+  text-align: right;
+}
+
+/* ─── Checkbox Items (Subtask) ────────────────────── */
+.subtask-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  border: 1px solid transparent;
+  transition: all var(--transition);
+}
+.checkbox-item:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-hover);
+}
+.checkbox-item.done {
+  opacity: 0.55;
+}
+
+.checkbox-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 2px solid var(--border-hover);
+  background: transparent;
+  color: var(--green);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition);
+}
+.checkbox-btn:hover {
+  border-color: var(--green);
+  background: rgba(74, 222, 128, 0.1);
+}
+.checkbox-item.done .checkbox-btn {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+
+.checkbox-text {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+.checkbox-item.done .checkbox-text {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.checkbox-del {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 13px;
+  padding: 4px 6px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+  opacity: 0;
+}
+.checkbox-item:hover .checkbox-del { opacity: 1; }
+.checkbox-del:hover {
+  color: var(--red);
+  background: rgba(248, 113, 113, 0.12);
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 2.5rem 1rem;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ─── Back Button ─────────────────────────────────── */
+.back-btn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition);
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.back-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--accent);
+  background: var(--bg-hover);
+}
+
+/* ─── Topic Detail View ──────────────────────────── */
+.topic-detail-header {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.topic-detail-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.topic-detail-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+.topic-detail-stats {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.topic-detail-percent {
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  color: var(--accent);
+  line-height: 1;
+}
+.topic-detail-count {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ─── Select Checkbox ─────────────────────────────── */
+.select-check {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* ─── Manage / Bulk Actions ───────────────────────── */
+.bulk-actions-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.bulk-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.manage-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+.manage-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--accent);
+  background: var(--bg-hover);
+}
+.bulk-select-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+.bulk-select-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--accent);
+  background: var(--bg-hover);
+}
+.bulk-del-btn {
+  padding: 5px 12px !important;
+  font-size: 12px !important;
+  white-space: nowrap;
+}
+
+/* ─── Pagination ──────────────────────────────────── */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 1rem;
+}
+.pagination-btn {
+  min-width: 34px;
+  height: 34px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+}
+.pagination-btn:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--bg-hover);
+}
+.pagination-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 700;
+}
+.pagination-btn:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+/* ─── Timer Start Panel ───────────────────────────── */
+.timer-start-panel {
+  padding: 1.25rem;
+}
+.timer-start-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.75rem;
+}
+.timer-start-icon {
+  font-size: 24px;
+}
+.timer-start-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.timer-start-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.timer-select-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.timer-select {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2'%3e%3cpath d='M6 9l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 18px;
+  padding-right: 36px;
+}
+.timer-select:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+.timer-go-btn {
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ─── Fullscreen Timer ────────────────────────────── */
+.timer-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--bg-primary, #0f0e17);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: timerFadeIn 0.4s ease;
+}
+@keyframes timerFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.timer-fullscreen-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.timer-topic-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.timer-display-big {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.timer-digit {
+  font-family: var(--font-mono);
+  font-size: 6rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+  min-width: 2.2ch;
+  text-align: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 0.3em 0.4em;
+}
+
+.timer-colon {
+  font-family: var(--font-mono);
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  line-height: 1;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.2; }
+}
+
+.timer-labels {
+  display: flex;
+  gap: 6px;
+  width: 100%;
+  max-width: 520px;
+}
+.timer-labels span {
+  flex: 1;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.timer-stop-btn {
+  padding: 16px 48px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-lg);
+  background: var(--red);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+.timer-stop-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(248, 113, 113, 0.3);
+}
+
+/* ─── Responsive ──────────────────────────────────── */
+@media (max-width: 768px) {
+  .study-page { gap: 0.75rem; }
+  .global-progress-percent { font-size: 1.4rem; }
+  .progress-bar-track.lg { height: 10px; }
+  .topic-detail-title { font-size: 1.15rem; }
+  .topic-detail-percent { font-size: 1.5rem; }
+
+  .timer-digit {
+    font-size: 3.5rem;
+    padding: 0.2em 0.3em;
+  }
+  .timer-colon { font-size: 3rem; }
+  .timer-stop-btn {
+    padding: 14px 36px;
+    font-size: 16px;
+  }
+  .timer-select-row { flex-direction: column; }
+  .timer-go-btn { width: 100%; }
+
+  .bulk-actions-bar { gap: 6px; }
+  .bulk-actions { gap: 6px; }
+}
+
+@media (max-width: 480px) {
+  .topic-title { font-size: 14px; }
+  .topic-header { padding: 0.75rem 1rem; }
+  .topic-progress-row { padding: 0 1rem 0.75rem; }
+  .timer-digit { font-size: 2.5rem; }
+  .timer-colon { font-size: 2rem; }
+}
