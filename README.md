@@ -1,6 +1,6 @@
 🚀 MyFlow – Life & Productivity Manager
 
-All-in-one application to manage your daily life, productivity, and focus.
+>All-in-one application to manage your daily life, productivity, and focus.
 
 🎥 Demo
 <p align="center">
@@ -15,30 +15,29 @@ All-in-one application to manage your daily life, productivity, and focus.
 
 ✨ Features
 🏠 Dashboard
-
-A clean overview of your daily activities and productivity.
+- A clean overview of your daily activities and productivity.
 
 💰 Finance Management
-Add income and expenses
-Track financial records easily
+- Add income and expenses
+- Track financial records easily
 
 📚 Study Tracker
-Focus using a study timer
-Organize topics and subtopics
-Track progress with percentages
+- Focus using a study timer
+- Organize topics and subtopics
+- Track progress with percentages
 
 📅 Calendar
-Add and manage events
-Plan your daily schedule
-Keep everything organized in one place
+- Add and manage events
+- Plan your daily schedule
+- Keep everything organized in one place
 
 🎯 Purpose
 
-MyFlow is built to help users stay organized, improve productivity, and manage their time effectively.
+- MyFlow is built to help users stay organized, improve productivity, and manage their time effectively.
 
 🛠️ Tech Stack
 Frontend: React
 
 📌 Notes
-This project is designed for personal productivity and life management
+- This project is designed for personal productivity and life management
 Simple, clean, and user-friendly interface
